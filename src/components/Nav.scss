@@ -1,0 +1,206 @@
+.nav {
+  height: 60vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url(../assets/luca-bravo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+
+    .hamburger {
+      display: none;
+    }
+
+    .links {
+      display: flex;
+      list-style-type: none;
+
+      .nav-link {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .subheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 40px;
+    margin-top: 200px;
+
+    .subheader-text h1 {
+      font-size: 45px;
+      font-weight: 900;
+    }
+
+    .subheader-text p {
+      max-width: 900px;
+    }
+
+    .subheader-buttons {
+      display: flex;
+      gap: 20px;
+      margin-top: 40px;
+
+      .explore-btn {
+        height: 50px;
+        width: 100px;
+        background-color: transparent;
+        border-radius: 10px;
+        border: 1px solid white;
+        color: white;
+        cursor: pointer;
+      }
+
+      .explore-btn:hover {
+        background-color: white;
+        color: black;
+      }
+
+      .watch-btn {
+        height: 50px;
+        width: 100px;
+        background-color: transparent;
+        border-radius: 10px;
+        border: 1px solid white;
+        color: white;
+        cursor: pointer;
+      }
+
+      .watch-btn:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav {
+    height: 50vh;
+
+    .subheader {
+      padding: 0 100px;
+      gap: 50px;
+
+      .subheader-buttons {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    height: 50vh;
+
+    .header {
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        margin: 5px 30px 0 0;
+
+        .line {
+          height: 2px;
+          width: 20px;
+          background: white;
+        }
+      }
+
+      .links {
+        display: none;
+      }
+    }
+
+    .subheader {
+      margin-top: 120px;
+
+      .subheader-text {
+        h1 {
+          font-size: 35px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .nav {
+    height: 30vh;
+    .header {
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        margin: 5px 30px 0 0;
+
+        .line {
+          height: 2px;
+          width: 20px;
+          background: white;
+        }
+      }
+
+      .links {
+        display: none;
+      }
+    }
+
+    .subheader {
+      margin-top: 20px;
+      max-width: 300px;
+      padding: 0 30px;
+      text-align: center;
+
+      .subheader-text {
+        font-size: 10px;
+        h1 {
+          font-size: 18px;
+        }
+
+        p {
+          font-weight: 300;
+          font-size: 12px;
+        }
+      }
+
+      .subheader-buttons {
+        width: 150px;
+
+        .explore-btn {
+          height: 35px;
+          width: 200px;
+          padding: 0 20px;
+          font-size: 10px;
+        }
+
+        .watch-btn {
+          height: 35px;
+          width: 200px;
+          padding: 0 20px;
+          font-size: 10px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

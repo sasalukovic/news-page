@@ -1,0 +1,43 @@
+.modal {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(49, 49, 49, 0.8);
+
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .close-modal {
+      display: flex;
+      justify-content: flex-end;
+
+      span {
+        background-color: white;
+        color: black;
+        border-radius: 40px;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .modal {
+    .modal-content {
+      align-items: center;
+      width: 100vw;
+
+      .iframe {
+        width: 300px;
+      }
+    }
+  }
+}
