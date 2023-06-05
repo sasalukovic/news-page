@@ -1,28 +1,50 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Nav.scss";
 import Modal from "./Modal";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
   const [openModal, setOpenModal] = useState(false);
+  const [openHamburgerMenu, setOpenHamburgerMenu] = useState(false);
+
+  const ref = useRef();
+  useEffect(() => {
+    const handler = (event) => {
+      if (
+        openHamburgerMenu &&
+        ref.current &&
+        !ref.current.contains(event.target)
+      ) {
+        setOpenHamburgerMenu(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener("mousedown", handler);
+    };
+  }, [openHamburgerMenu]);
 
   const toggleModal = () => {
     setOpenModal(!openModal);
   };
 
   return (
-    <nav className="nav">
+    <nav className="nav" ref={ref}>
       {openModal && <Modal toggleModal={toggleModal} />}
       <header className="header">
-        <div className="hamburger">
+        <div
+          className="hamburger"
+          onClick={() => setOpenHamburgerMenu((prevState) => !prevState)}
+        >
           <div className="line"></div>
           <div className="line"></div>
           <div className="line"></div>
         </div>
         <div className="logo-container">
-          <img src="../assets/logo.svg " alt="asioso" className="logo" />
+          <img src="/logo.svg" alt="asioso" className="logo" />
         </div>
-        <ul className="links">
+        <ul className={`${openHamburgerMenu ? "active" : "links"}`}>
           <Link className="nav-link" to={"/"}>
             Home
           </Link>

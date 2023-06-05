@@ -3,7 +3,7 @@ import MainSection from "../components/MainSection";
 import SubscribeSection from "../components/SubscribeSection";
 import Footer from "../components/Footer";
 
-const Main = () => {
+const Home = () => {
   return (
     <>
       <Nav />
@@ -14,4 +14,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Home;
