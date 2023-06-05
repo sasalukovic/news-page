@@ -30,9 +30,9 @@ const Nav = () => {
   };
 
   return (
-    <nav className="nav" ref={ref}>
+    <header className="header" ref={ref}>
       {openModal && <Modal toggleModal={toggleModal} />}
-      <header className="header">
+      <nav className="nav">
         <div
           className="hamburger"
           onClick={() => setOpenHamburgerMenu((prevState) => !prevState)}
@@ -58,7 +58,7 @@ const Nav = () => {
             Contact
           </Link>
         </ul>
-      </header>
+      </nav>
 
       <section className="subheader">
         <div className="subheader-text">
@@ -78,7 +78,7 @@ const Nav = () => {
           </button>
         </div>
       </section>
-    </nav>
+    </header>
   );
 };
 

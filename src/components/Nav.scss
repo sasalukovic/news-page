@@ -1,4 +1,4 @@
-.nav {
+.header {
   height: 80vh;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
     url(../assets/luca-bravo.jpg);
@@ -11,7 +11,7 @@
   flex-direction: column;
   position: relative;
 
-  .header {
+  .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -95,7 +95,7 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .nav {
+  .header {
     height: 60vh;
 
     .subheader {
@@ -110,10 +110,10 @@
 }
 
 @media screen and (max-width: 768px) {
-  .nav {
+  .header {
     height: 50vh;
 
-    .header {
+    .nav {
       position: relative;
       .hamburger {
         display: flex;
@@ -174,9 +174,9 @@
 }
 
 @media screen and (max-width: 376px) {
-  .nav {
+  .header {
     height: 30vh;
-    .header {
+    .nav {
       .hamburger {
         display: flex;
         flex-direction: column;
